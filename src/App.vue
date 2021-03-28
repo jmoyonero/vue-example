@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header></Header>
+    <NavMenu></NavMenu>
+    <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import NavMenu from './components/NavigationMenu.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Footer,
+    NavMenu
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
 </style>
